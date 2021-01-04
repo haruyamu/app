@@ -90,10 +90,18 @@ header {
 
 .letter {
   font-size: 70px;
-  width: 400px;
+  margin: 0 auto;
   font-family: "Caveat", cursive;
-  text-align: center;
   margin-bottom: 0;
+  color: black;
+  text-decoration: none;
+}
+.letter:hover {
+  color: black;
+  text-decoration: none;
+}
+.left-header {
+  width: 500px;
 }
 .right-header {
   display: flex;
@@ -146,4 +154,85 @@ header {
 .upper {
   display: flex;
   justify-content: space-between;
+  margin: 20px;
+  font-family: serif;
+  padding: 0 40px;
+  height: 120px;
+}
+.right {
+  display: flex;
+  margin: auto 0;
+  font-size: 20px;
+}
+.right_edit {
+  margin-right: 20px;
+}
+.left {
+  height: 120px;
+  width: 139px;
+  font-size: 20px;
+}
+.name_cl {
+  font-size: 30px;
+}
+.back {
+  margin-top: 100px;
+}
+.box_spe {
+  padding: 20px;
+}
+
+.image_size {
+  height: 450px;
+  width: 550px;
+  margin-left: 30px;
+}
+.left-show {
+  width: 50%;
+}
+.left-show {
+  width: 50%;
+}
+.all-show {
+  display: flex;
+  height: 500px;
+  font-family: serif;
+}
+.pic {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.place-size {
+  font-size: 21px;
+}
+.content-size {
+  font-size: 18px;
+}
+.element {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+.editer {
+  width: 200px;
+  margin: 30px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+  background-color: green;
+}
+.destroy {
+  width: 200px;
+  margin: 30px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+}
+.center {
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
 }

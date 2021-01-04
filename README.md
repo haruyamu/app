@@ -1,24 +1,66 @@
-# README
+## users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| column   | type   | options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :posts
+- has_many :comments
+- has_many :books
 
-* System dependencies
+## posts
 
-* Configuration
+| column  | type       | options                       |
+| ------- | ---------- | ----------------------------- |
+| title   | string     | null: false                   |
+| place   | string     | null: false                   |
+| content | text       | null: false                   |
+| user    | references | null: false,foreign_key; true |
 
-* Database creation
+### Association
 
-* Database initialization
+-belongs_to :user
+has_many :comments
+has_many :books
+has_many :likes
 
-* How to run the test suite
+## books
 
-* Services (job queues, cache servers, search engines, etc.)
+| column | type       | options                       |
+| ------ | ---------- | ----------------------------- |
+| user   | references | null: false,foreign_key; true |
+| post   | references | null: false,foreign_key; true |
 
-* Deployment instructions
+### Association
 
-* ...
+-belongs_to :user
+-belongs_to :post
+
+## like
+
+| column | type       | options                       |
+| ------ | ---------- | ----------------------------- |
+| user   | references | null: false,foreign_key; true |
+| post   | references | null: false,foreign_key; true |
+
+### Association
+
+-belongs_to :user
+-belongs_to :post
+
+## comments
+
+| column | type       | options                       |
+| ------ | ---------- | ----------------------------- |
+| text   | text       | null: false                   |
+| user   | references | null: false,foreign_key; true |
+| post   | references | null: false,foreign_key; true |
+
+### Association
+
+-belongs_to :user
+-belongs_to :post

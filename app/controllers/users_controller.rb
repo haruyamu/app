@@ -8,10 +8,16 @@ class UsersController < ApplicationController
       render :edit
     end
    end
+   def show
+    @posts = Post.all.order('created_at DESC')
+    @name = current_user.name
+    @post = Post.find(params[:id])
+   end
+   
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email,:password)
   end
 end

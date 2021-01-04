@@ -1,2 +1,24 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="post post_ed">
+  <div class="new_post">
+    <h1> edit post </h1>
+  </div>
+  <div class="form">
+    <%= form_with model: @post, local: true do |f| %>
+    <div class="form_title">
+      <%= f.text_field :title,placeholder: "タイトルを入力してください", class: "field_title" %>
+    </div>
+    <div class="form_place">
+      <%= f.text_field :place,class: "field_place",placeholder: "場所を入力してください" %>
+    </div>
+    <div class="form_content">
+      <%= f.text_area :content,class: "field_content",rows: 6,placeholder: "この投稿の詳細文を入力してください" %>
+    </div>
+    <div class="form_image">
+      <%= f.file_field :image,class: "file_field" %>
+    </div>
+    <div class="form_submit">
+      <%= f.submit "Submit" %>
+    </div>
+    <% end %>
+  </div>
+</div>

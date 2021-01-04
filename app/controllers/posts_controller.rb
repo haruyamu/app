@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_params, only: %i[ edit update show destory]
+  before_action :set_params, only: %i[edit update show destory]
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def edit; end
 
   def update
-    if @post.update(post_params)
+    if @post.update(create_params)
       redirect_to root_path
     else
       render :edit
@@ -37,6 +37,4 @@ class PostsController < ApplicationController
   def set_params
     @post = Post.find(params[:id])
   end
-  
-  
 end
