@@ -13,3 +13,137 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.post {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 60%;
+  margin: 30px auto;
+  height: 600px;
+  font-family: serif;
+  background-color: lightblue;
+}
+.new_post {
+  text-align: center;
+  margin-top: 40px;
+}
+.form {
+  margin: 20px auto;
+  text-align: center;
+}
+.form_title {
+  height: 50x;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_title {
+  height: 50px;
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.form_place {
+  height: 50x;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_place {
+  height: 50px;
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.form_content {
+  height: 240px;
+  margin: 0 auto;
+  width: 70%;
+}
+.field_content {
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.p_title {
+  font-size: 18px;
+}
+.p_height {
+  height: 250px;
+}
+.jump_link {
+  bottom: 0;
+  position: relative;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  height: 160px;
+  padding: 20px 10px;
+  background-color: lightgray;
+  background-image: url(/images/book.jpeg);
+}
+
+.letter {
+  font-size: 70px;
+  width: 400px;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  margin-bottom: 0;
+}
+.right-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.search-form {
+  margin: auto 0;
+}
+.btn {
+  height: 20px;
+  display: inline-block;
+  margin: 25px 20px 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: 0.2s ease;
+}
+.form_image {
+  margin-bottom: 20px;
+}
+.image_size,
+.books-image {
+  width: 300px;
+  height: 250px;
+}
+.box {
+  margin: 50px;
+  height: 500px;
+}
+.box-inner {
+  margin: auto;
+  font-family: serif;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 30%;
+  height: 400px;
+  font-size: 19px;
+}
+.form__btn {
+  margin-top: 20px;
+}
+.box_width {
+  width: 80%;
+}
+.box-login {
+  margin: 20px 0;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+}
