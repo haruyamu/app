@@ -1,10 +1,7 @@
 <div class="my_profile">
   <div class="upper">
     <div class="left">
-      user name:
-      <div class="name_cl">
-        <%= @name %>
-      </div>
+      User page
     </div>
     <div class=" right">
       <div class="right_edit">
@@ -28,6 +25,7 @@
           <h3 class="mb-0">
             <p class="content_plus"><%= p.content %></p>
           </h3>
+          <%= link_to p.user.name + "さん",users_path, class:" mb-2 text-primary " %>
         </div>
         <%= image_tag p.image, class: "card-img-right flex-auto d-none d-lg-block pic-size" if p.image.attached?%>
       </div>

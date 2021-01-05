@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+     @posts = Post.all.order('created_at DESC')
+  end
+  
    def edit
    end
    def update
@@ -11,9 +15,8 @@ class UsersController < ApplicationController
    def show
     @posts = Post.all.order('created_at DESC')
     @name = current_user.name
-    @post = Post.find(params[:id])
+    # @post = Post.find(params[:post_id])
    end
-   
 
   private
 

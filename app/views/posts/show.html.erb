@@ -17,14 +17,47 @@
       <h3>
         <%= @post.content %>
       </h3>
+      <div class="heart">
+        <div class="like_count">
+          <h3>❤️: <%= @post.likes.count %></h3>
+        </div>
+        <div class="like_already">
+          <% if current_user.already_liked?(@post) %>
+          <%= button_to '💚', post_like_path(@post), method: :delete ,class:"like_btn"%>
+          <% else %>
+          <%= button_to '💛', post_likes_path(@post) ,class:"like_btn" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-  <% if current_user.id == @post.user.id %>
-  <div class="element">
-    <div class="center">
-      <%= link_to  "編集する",edit_post_path(@post), class: "editer" %>
-      <%= link_to  "削除する","#", class: "destroy" %>
+</div>
+<% if current_user.id == @post.user.id %>
+<div class="element">
+  <div class="center">
+    <%= link_to  "編集する",edit_post_path(@post), class: "editer" %>
+    <%= link_to  "削除する",post_path(@post.id), method: :delete, class: "destroy" %>
+  </div>
+</div>
+<% end %>
+<div class="border">
+  <div class="comment-boss">
+    <div class="comment_form">
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "コメントを入力しています...", rows: "2",class: "comment_text" %>
+      <%= form.submit "SEND",class:"btn_comment" %>
+      <% end %>
+      <strong>
     </div>
   </div>
-  <% end %>
+  <div class="comments">
+    <h4>この投稿へのコメント</h4>
+    <% @comments.each do |comment| %>
+    <p class="bload">
+      <strong><%= link_to comment.user.name, user_path(comment.user.id) %>：</strong>
+      <%= comment.text %>
+    </p>
+    <% end %>
+  </div>
+</div>
 </div>

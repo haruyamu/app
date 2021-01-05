@@ -75,6 +75,7 @@
 }
 .jump_link {
   bottom: 0;
+  margin-top: 80px;
   position: relative;
 }
 .top {
@@ -114,7 +115,7 @@ header {
 .btn {
   height: 20px;
   display: inline-block;
-  margin: 25px 20px 20px;
+  margin: 35px 20px 20px;
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -124,10 +125,10 @@ header {
 .form_image {
   margin-bottom: 20px;
 }
-.image_size,
+.pic-size,
 .books-image {
-  width: 300px;
-  height: 250px;
+  width: 353px;
+  height: 270px;
 }
 .box {
   margin: 50px;
@@ -171,6 +172,8 @@ header {
   height: 120px;
   width: 139px;
   font-size: 20px;
+  font-size: 25px;
+  margin-top: 30px;
 }
 .name_cl {
   font-size: 30px;
@@ -206,6 +209,9 @@ header {
 .place-size {
   font-size: 21px;
 }
+.card-body {
+  max-width: 350px;
+}
 .content-size {
   font-size: 18px;
 }
@@ -235,4 +241,100 @@ header {
   text-align: center;
   display: flex;
   margin: 0 auto;
+}
+.title_plus {
+  font-size: 24px;
+}
+.comment_form {
+  height: 50px;
+  font-family: serif;
+}
+.comment_text {
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid rgb(216, 202, 202);
+  border-radius: 5px;
+}
+.btn_comment {
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(98, 53, 156);
+  height: 50px;
+}
+.comment-boss {
+  width: 100%;
+  margin: 0 auto;
+}
+.comments {
+  float: left;
+  height: 340px;
+}
+.comments {
+  font-size: 20px;
+  font-family: serif;
+  text-align-last: left;
+  width: 100%;
+  margin-top: 80px;
+  overflow: scroll;
+}
+.border {
+  border: 1px solid #000;
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+.bload {
+  margin-top: 30px;
+}
+.input-search {
+  width: 600px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  font-size: 19px;
+}
+.boss {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.btn-search {
+  height: 50px;
+  border-radius: 20px;
+  width: 100px;
+  background: lightblue;
+  color: white;
+  border: 1px solid lightblue;
+}
+.title_plus {
+  height: 60px;
+  max-width: 320px;
+  font-size: 24px;
+}
+.content_plus {
+  height: 100px;
+  max-width: 320px;
+  font-size: 13px;
+}
+.add {
+  margin-left: 40px;
+}
+.lower {
+  width: 100%;
+}
+.heart {
+  margin-top: 200px;
+  display: flex;
+  margin-left: 500px;
+}
+.like_user {
+  font-size: 20px;
+}
+.like_already {
+  margin-left: 20px;
+}
+.like_btn {
+  border: none;
+  background-color: #fff;
 }

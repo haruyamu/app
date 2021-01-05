@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-  before_action :set_params, only: %i[edit update show destory]
+  before_action :set_params, only: %i[edit update show ]
+  before_action :authenticate_user!, except: [:index,:show,:search]
+
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -25,9 +27,21 @@ class PostsController < ApplicationController
       render :edit
     end
   end
-  def show
+
+  def search
+    @posts = Post.search(params[:keyword])
   end
-  
+
+  def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+    @like = Like.new
+  end
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path
+  end
 
   private
   def create_params
