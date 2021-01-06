@@ -1,0 +1,13 @@
+<div class="user_index m-5">
+  <% @posts.each do |p| %>
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h3 class="featurette-heading text-success"><%= p.title%> <span class="text-muted"> </span></h3>
+      <p class="lead content_spe"><%= p.content%></p>
+    </div>
+    <div class="col-md-5">
+      <%= image_tag  p.image, class: "pic_large featurette-image img-fluid mx-auto"%>
+    </div>
+  </div>
+  <% end %>
+</div>

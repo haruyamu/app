@@ -193,7 +193,7 @@ header {
 .left-show {
   width: 50%;
 }
-.left-show {
+.right-show {
   width: 50%;
 }
 .all-show {
@@ -324,7 +324,6 @@ header {
   width: 100%;
 }
 .heart {
-  margin-top: 200px;
   display: flex;
   margin-left: 500px;
 }
@@ -337,4 +336,80 @@ header {
 .like_btn {
   border: none;
   background-color: #fff;
+}
+.btn_alert {
+  color: red;
+  font-size: 20px;
+}
+.length {
+  font-size: 20px;
+}
+.right_square {
+  max-width: 700px;
+}
+.inner1 {
+  height: 30px;
+}
+.inner2 {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inner1 {
+  height: 150px;
+}
+.square_inner {
+  border: 1px solid #000;
+  height: 450px;
+  border-radius: 6px;
+}
+.pic_large {
+  height: 350px;
+  width: 400px;
+}
+.content_spe {
+  height: 200px;
+  word-wrap: break-word;
+}
+.box_size {
+  height: 430px;
+}
+.title_font {
+  font-size: 23px;
+  word-wrap: break-word;
+}
+.featurette {
+  font-family: serif;
+  font-size: 20px;
+}
+.flame {
+  width: 700px;
+  margin: 0 auto;
+}
+.flame_image {
+  width: 600px;
+  height: 430px;
+}
+.flame_content {
+  height: 140px;
+  word-wrap: break-word;
+  font-family: serif;
+  font-size: 20px;
+}
+.flame_place {
+  height: 30px;
+  word-wrap: break-word;
+  font-size: 18px;
+  font-family: serif;
+  color: green;
+}
+.flame_title {
+  height: 60px;
+  word-wrap: break-word;
+  color: blue;
+  font-size: 20px;
+  font-family: "Bangers", cursive;
+}
+.pic_large {
+  margin-bottom: 40px;
 }

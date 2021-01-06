@@ -24,7 +24,8 @@
         <% end %>
         <%= link_to "book", "#", class: "btn" %>
         <%= link_to  "new post", new_post_path, class: "btn" %>
-        <%= link_to  "profile", "/users/#{current_user.id}",class: "btn" %>
+        <%= link_to  "profile", users_path,class: "btn" %>
+        <%= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "btn btn_alert" %>
       </div>
       <% else %>
       <div class="right-header">

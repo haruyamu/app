@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  def index
-     @posts = Post.all.order('created_at DESC')
-  end
-  
+   def index
+    @posts = current_user.posts
+    @name = current_user.name
+   end
    def edit
    end
    def update
@@ -13,14 +13,14 @@ class UsersController < ApplicationController
     end
    end
    def show
-    @posts = Post.all.order('created_at DESC')
-    @name = current_user.name
-    # @post = Post.find(params[:post_id])
+     user = User.find(params[:id])
+    @name = user.name
+    @posts = user.posts
    end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email,:password)
+    params.require(:user).permit(:name, :email,:password).merge(post_id: params[:post_id])
   end
 end
