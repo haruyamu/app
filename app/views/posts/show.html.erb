@@ -28,7 +28,7 @@
        <%= @post.content%>
      </div>
    </div>
-   <% if current_user.id == @post.user_id %>
+   <% if user_signed_in? && current_user.id == @post.user_id %>
    <div class="element">
      <div class="center">
        <%= link_to  "編集する",edit_post_path(@post), class: "editer" %>
@@ -36,6 +36,7 @@
      </div>
    </div>
    <% end %>
+   <% if user_signed_in? %>
    <div class="border">
      <div class="comment-boss">
        <div class="comment_form">
@@ -46,6 +47,7 @@
          <strong>
        </div>
      </div>
+     <% end  %>
      <div class="comments">
        <h4>この投稿へのコメント</h4>
        <% @comments.each do |comment| %>

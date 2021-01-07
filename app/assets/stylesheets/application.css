@@ -369,6 +369,7 @@ header {
 }
 .content_spe {
   height: 200px;
+  margin: 30px 90px;
   word-wrap: break-word;
 }
 .box_size {
@@ -412,4 +413,11 @@ header {
 }
 .pic_large {
   margin-bottom: 40px;
+}
+.each_title {
+  text-align: center;
+  font-size: 36px;
+}
+.user_index {
+  padding: 0 50px;
 }
